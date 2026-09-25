@@ -1,0 +1,10 @@
+# Private coordination artifacts — never published
+HANDOFF.md
+*.private.json
+assets.manifest.json
+derivation.log.json
+
+node_modules/
+dist/
+.DS_Store
+*.log
