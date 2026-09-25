@@ -11,14 +11,11 @@ Honest status of the CrashFactory website. Items are open unless marked done.
 - [x] Audited the downloaded dataset archive (`CrashDatasets.zip`, 5712 files) against the local working copy — byte-identical.
 - [x] **Curated example set selected and reviewed**: 8 scenarios, plus the paper-matched surround-view clip and the framework figure.
 - [x] **Media derivation complete**: 15 derived assets (14 videos + 1 figure) and 14 poster frames, 12.59 MB total. Every derived video decodes fully; all 15 source files verified unchanged afterwards.
-- [x] Accessibility pass: contrast, keyboard reachability, labelled controls, focus outlines; checked at 1440×1000, 390×844 and 320×720.
-
-## Pending deployment
-
-- [ ] **Publish the public repository and enable the Pages workflow.** The site builds and has
-      passed review; it is **not yet live**. The intended address is
-      https://haoweili1.github.io/CrashFactory/ and will be confirmed only after deployment
-      is verified.
+- [x] Accessibility pass: contrast, keyboard reachability, labelled controls, focus outlines; checked at 1440×1000, 390×844 and 320×720 in light and dark themes, with zero axe violations against `wcag2a`, `wcag2aa` and `wcag21aa`.
+- [x] **Published and deployed.** The site is live at https://haoweili1.github.io/CrashFactory/,
+      built and deployed by [this Actions run](https://github.com/HaoweiLi1/CrashFactory/actions/runs/36092383662).
+      Pages build type is `workflow` with HTTPS enforced. The live resources were verified
+      byte-identical to the reviewed build.
 
 ## Open
 

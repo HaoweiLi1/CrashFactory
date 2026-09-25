@@ -4,7 +4,7 @@ Static project page for the paper **CrashFactory: From Crash Databases to Scalab
 Safety-Critical Data Synthesis for End-to-End Autonomous Driving** (preprint,
 [SSRN 7288377](https://ssrn.com/abstract=7288377)).
 
-Intended address: **https://haoweili1.github.io/CrashFactory/**
+**Live at https://haoweili1.github.io/CrashFactory/**
 
 This repository holds the **website source and the reviewed synthetic media it displays**
 — generated sensor videos, bird's-eye simulation renders and the framework figure, all
@@ -94,9 +94,16 @@ lineage. Only sanitized fields reach `public/data/cases.json`.
 
 ## Deploy
 
-`.github/workflows/deploy.yml` builds on push to `main` and publishes to GitHub Pages.
-`public/.nojekyll` keeps Pages from post-processing the build. Navigation is
-anchor-based, so no SPA fallback is required.
+The site is deployed and live at https://haoweili1.github.io/CrashFactory/.
+
+`.github/workflows/deploy.yml` builds on every push to `main` and publishes to GitHub
+Pages. The Pages build type is `workflow` and HTTPS is enforced. `public/.nojekyll` keeps
+Pages from post-processing the build, and navigation is anchor-based, so no SPA fallback
+is required.
+
+The site is served from a project subpath, so `base` must match the repository name.
+`vite.config.ts` defaults it to `/CrashFactory/`; override with `SITE_BASE` if the
+repository is ever renamed or the site is hosted elsewhere.
 
 ## Credits
 
