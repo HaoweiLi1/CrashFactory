@@ -37,7 +37,7 @@ IMAGE_EXT = {".png", ".jpg", ".jpeg", ".webp"}
 
 PUBLIC_MEDIA_FIELDS = (
     "kind", "label", "src", "poster", "width", "height",
-    "fps", "duration", "bytes", "sha256", "attribution",
+    "fps", "frames", "duration", "bytes", "sha256", "attribution",
 )
 PUBLIC_CASE_FIELDS = ("id", "title", "source", "summary", "tags", "paperPanel")
 
@@ -585,7 +585,7 @@ def main() -> int:
                 "bytes": size,
                 "sha256": sha256_of(out),
             }
-            entry.update({k: v for k, v in out_probe.items() if k != "frames"})
+            entry.update(out_probe)
             attribution = resolve_attribution(job.attribution, defaults)
             if attribution:
                 entry["attribution"] = attribution

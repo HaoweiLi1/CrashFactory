@@ -42,7 +42,7 @@ That file is the single source of truth: every figure on the page is **reported 
 paper**, not measured by this site. Do not add a value there without checking the PDF.
 
 Curated media is described by `public/data/cases.json`, which is **generated** — never
-edit it by hand. It ships with an empty case list until media has passed review.
+edit it by hand.
 
 ```jsonc
 {
@@ -65,6 +65,21 @@ generated **output**:
 | `surround_sixup` | Six synchronized views composited into one grid for display |
 | `hdmap_condition` | HD-map conditioning input — not generated imagery |
 | `trajectory`, `map`, `figure`, `image` | Stills |
+
+## Case explorer
+
+The examples section is a single large stage driven by a thumbnail rail: pick a scenario,
+then switch between the generated sensor footage and the bird's-eye reconstruction. A case
+with no sensor clip offers only the reconstruction.
+
+The two views come from different stages at different frame rates and run on **independent
+timelines**; the page never presents them as synchronized.
+
+Each player carries exact frame stepping, driven by the `fps` and `frames` values in the
+manifest. `,` and `.` step one frame while paused, the readout shows the frame index and
+timestamp, and **Enlarge** opens a native `<dialog>` at the current frame with the same
+controls. Only one video on the page plays at a time; nothing autoplays, and only the
+selected clip loads metadata.
 
 ## Media preparation
 
@@ -97,13 +112,26 @@ lineage. Only sanitized fields reach `public/data/cases.json`.
 The site is deployed and live at https://haoweili1.github.io/CrashFactory/.
 
 `.github/workflows/deploy.yml` builds on every push to `main` and publishes to GitHub
-Pages. The Pages build type is `workflow` and HTTPS is enforced. `public/.nojekyll` keeps
+Pages; [recent runs](https://github.com/HaoweiLi1/CrashFactory/actions/workflows/deploy.yml). The Pages build type is `workflow` and HTTPS is enforced. `public/.nojekyll` keeps
 Pages from post-processing the build, and navigation is anchor-based, so no SPA fallback
 is required.
 
 The site is served from a project subpath, so `base` must match the repository name.
 `vite.config.ts` defaults it to `/CrashFactory/`; override with `SITE_BASE` if the
 repository is ever renamed or the site is hosted elsewhere.
+
+## Media review scope
+
+Media shown here was selected from a full decode of 311 candidate sensor clips (37,320
+frames), with six-frame visual screening across every candidate. Every frame was then
+visually inspected for the 15 shortlisted sensor clips (1,800 frames), all 8 published
+bird's-eye clips (400 frames), the six surround-view source views (342 frames) and the 57
+frames of the published surround composite.
+
+Selection judged clarity of the conflict, actor persistence, temporal continuity, geometry
+and rendering artifacts. It is a display-quality judgement: publishing a clip is not a claim
+that it reproduces its source crash faithfully, and no similarity measurement used during
+selection is reported as a result.
 
 ## Credits
 

@@ -23,10 +23,27 @@ export const paper = {
     { name: 'Xintao Yan', marks: ['c', '*'] },
     { name: 'Henry X. Liu', marks: ['a', '*'] },
   ],
+  /**
+   * `name` is the full affiliation exactly as printed in the paper and is the
+   * record of truth. `short` is what the hero displays, matching the compact
+   * institution-only style used by the sibling project pages.
+   */
   affiliations: [
-    { mark: 'a', name: 'Transportation Research Institute, University of Michigan, Ann Arbor, MI, USA' },
-    { mark: 'b', name: 'Laplace Intelligence, Ann Arbor, MI, USA' },
-    { mark: 'c', name: 'Department of Civil Engineering, The University of Hong Kong, Hong Kong, China' },
+    {
+      mark: 'a',
+      name: 'Transportation Research Institute, University of Michigan, Ann Arbor, MI, USA',
+      short: 'University of Michigan',
+    },
+    {
+      mark: 'b',
+      name: 'Laplace Intelligence, Ann Arbor, MI, USA',
+      short: 'Laplace Intelligence',
+    },
+    {
+      mark: 'c',
+      name: 'Department of Civil Engineering, The University of Hong Kong, Hong Kong, China',
+      short: 'The University of Hong Kong',
+    },
   ],
   authorNotes: [
     { mark: '†', text: 'These authors contributed equally to this work.' },

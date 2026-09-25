@@ -25,9 +25,11 @@ export default function Hero() {
         <ul className="affiliations">
           {paper.affiliations.map((af) => (
             <li key={af.mark}>
-              <sup>{af.mark}</sup> {af.name}
+              <sup>{af.mark}</sup> {af.short}
             </li>
           ))}
+        </ul>
+        <ul className="affiliations author-notes">
           {paper.authorNotes.map((n) => (
             <li key={n.mark}>
               <sup>{n.mark}</sup> {n.text}

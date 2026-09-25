@@ -23,7 +23,7 @@ export default function Framework({ media }: { media?: MediaItem }) {
           </div>
         )}
 
-        <ol className="module-grid" style={{ listStyle: 'none', padding: 0 }}>
+        <ol className="module-grid module-row" style={{ listStyle: 'none', padding: 0 }}>
           {modules.map((m, i) => (
             <li className="module" key={m.id} id={m.id}>
               <div className="module-index">0{i + 1}</div>

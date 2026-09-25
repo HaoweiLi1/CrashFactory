@@ -103,10 +103,16 @@ export default function Results() {
 
         <div className="table-grid">
           <FlatTable t={tableCollisionType} />
-          <FlatTable t={tableInjurySeverity} />
-          <LaneTable />
           <FlatTable t={tableTrajectoryFidelity} />
         </div>
+
+        <details className="tables-more">
+          <summary>Full tables</summary>
+          <div className="table-grid">
+            <LaneTable />
+            <FlatTable t={tableInjurySeverity} />
+          </div>
+        </details>
       </div>
     </section>
   );

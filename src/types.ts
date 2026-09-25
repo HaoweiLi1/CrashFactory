@@ -19,6 +19,8 @@ export interface MediaItem {
   width?: number;
   height?: number;
   fps?: number;
+  /** Exact integer frame count, published by the asset tool. */
+  frames?: number;
   duration?: number;
   bytes?: number;
   sha256?: string;

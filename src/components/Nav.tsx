@@ -1,26 +1,22 @@
 const links = [
-  ['#teaser', 'Overview'],
+  ['#teaser', 'Surround view'],
+  ['#gallery', 'Examples'],
   ['#abstract', 'Abstract'],
   ['#framework', 'Framework'],
-  ['#gallery', 'Examples'],
   ['#results', 'Results'],
   ['#citation', 'Citation'],
 ];
 
+/** Compact, non-sticky waypoints. The references use no persistent chrome. */
 export default function Nav() {
   return (
     <nav className="nav" aria-label="Section navigation">
-      <div className="shell nav-inner">
-        <a className="nav-mark" href="#top">
-          CrashFactory
-        </a>
-        <div className="nav-links">
-          {links.map(([href, label]) => (
-            <a key={href} href={href}>
-              {label}
-            </a>
-          ))}
-        </div>
+      <div className="shell nav-links">
+        {links.map(([href, label]) => (
+          <a key={href} href={href}>
+            {label}
+          </a>
+        ))}
       </div>
     </nav>
   );

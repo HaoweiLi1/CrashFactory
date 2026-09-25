@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Abstract from './components/Abstract';
 import Teaser from './components/Teaser';
 import Framework from './components/Framework';
-import Gallery from './components/Gallery';
+import CaseExplorer from './components/CaseExplorer';
 import Results from './components/Results';
 import Citation from './components/Citation';
 import Credits from './components/Credits';
@@ -40,13 +40,13 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <Nav />
       <main id="main">
         <Hero />
+        <Nav />
         <Teaser media={data.teaser?.media} />
+        <CaseExplorer cases={data.cases} />
         <Abstract />
         <Framework media={data.framework?.media} />
-        <Gallery cases={data.cases} />
         <Results />
         <Citation />
       </main>

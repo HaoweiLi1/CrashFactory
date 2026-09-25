@@ -12,8 +12,18 @@ Honest status of the CrashFactory website. Items are open unless marked done.
 - [x] **Curated example set selected and reviewed**: 8 scenarios, plus the paper-matched surround-view clip and the framework figure.
 - [x] **Media derivation complete**: 15 derived assets (14 videos + 1 figure) and 14 poster frames, 12.59 MB total. Every derived video decodes fully; all 15 source files verified unchanged afterwards.
 - [x] Accessibility pass: contrast, keyboard reachability, labelled controls, focus outlines; checked at 1440×1000, 390×844 and 320×720 in light and dark themes, with zero axe violations against `wcag2a`, `wcag2aa` and `wcag21aa`.
+- [x] **Media-first layout**: compact hero, the surround-view player directly beneath it, and a
+      single large case stage in place of the earlier card grid.
+- [x] **Case explorer**: eight-scenario thumbnail rail, sensor / bird's-eye switching per case,
+      exact frame stepping with keyboard support, and an enlarged view that preserves the
+      current frame. One active player at a time; no autoplay.
+- [x] **Curation coverage**: 311 candidate sensor clips fully decoded (37,320 frames) with
+      six-frame visual screening across every candidate; full-frame inspection of the 15
+      shortlisted sensor clips (1,800 frames), all 8 published bird's-eye clips (400 frames),
+      the six surround source views (342 frames) and the 57 published composite frames.
 - [x] **Published and deployed.** The site is live at https://haoweili1.github.io/CrashFactory/,
-      built and deployed by [this Actions run](https://github.com/HaoweiLi1/CrashFactory/actions/runs/36092383662).
+      built and deployed by the
+      [Pages workflow](https://github.com/HaoweiLi1/CrashFactory/actions/workflows/deploy.yml).
       Pages build type is `workflow` with HTTPS enforced. The live resources were verified
       byte-identical to the reviewed build.
 
@@ -23,9 +33,6 @@ Honest status of the CrashFactory website. Items are open unless marked done.
       visual clarity, not a representative sample of the evaluated cohorts.
 - [ ] **Additional sensing examples.** More generated sensor sequences, each subject to
       per-clip temporal-quality inspection before publication.
-- [ ] **Further source audit.** The locally downloaded archive was audited. The Google Drive
-      account itself has **not** been connected or audited; any additional material there
-      remains an open item.
 - [ ] **Research code release.** Not decided. The repository link on the site points at the
       *website source*; no research code or pipeline is published here.
 - [ ] **Data release.** Not decided. No crash-database records are published on this site.
